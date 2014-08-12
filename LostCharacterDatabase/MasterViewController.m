@@ -20,8 +20,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    NSSortDescriptor *sortCharacter = [[NSSortDescriptor alloc] initWithKey:@"passenger" ascending:YES];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortCharacter];
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Character"];
+    request.sortDescriptors = sortDescriptors;
     self.characters  = [self.managedObjectContext executeFetchRequest:request error:nil];
     if (self.characters.count == 0) {
         [self loadDataFromPropertyList];
