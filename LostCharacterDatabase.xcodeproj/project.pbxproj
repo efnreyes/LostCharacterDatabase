@@ -25,6 +25,7 @@
 		F92CA6DB199A95D4009FCE54 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92CA6B6199A95D4009FCE54 /* CoreData.framework */; };
 		F92CA6E3199A95D4009FCE54 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F92CA6E1199A95D4009FCE54 /* InfoPlist.strings */; };
 		F92CA6E5199A95D4009FCE54 /* LostCharacterDatabaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CA6E4199A95D4009FCE54 /* LostCharacterDatabaseTests.m */; };
+		F92CA6F0199A9E3F009FCE54 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CA6EF199A9E3F009FCE54 /* Character.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		F92CA6E0199A95D4009FCE54 /* LostCharacterDatabaseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostCharacterDatabaseTests-Info.plist"; sourceTree = "<group>"; };
 		F92CA6E2199A95D4009FCE54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F92CA6E4199A95D4009FCE54 /* LostCharacterDatabaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LostCharacterDatabaseTests.m; sourceTree = "<group>"; };
+		F92CA6EE199A9E3F009FCE54 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		F92CA6EF199A9E3F009FCE54 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				F92CA6D0199A95D4009FCE54 /* Images.xcassets */,
 				F92CA6C7199A95D4009FCE54 /* LostCharacterDatabase.xcdatamodeld */,
 				F92CA6B9199A95D4009FCE54 /* Supporting Files */,
+				F92CA6EE199A9E3F009FCE54 /* Character.h */,
+				F92CA6EF199A9E3F009FCE54 /* Character.m */,
 			);
 			path = LostCharacterDatabase;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				F92CA6C3199A95D4009FCE54 /* AppDelegate.m in Sources */,
 				F92CA6C9199A95D4009FCE54 /* LostCharacterDatabase.xcdatamodeld in Sources */,
 				F92CA6BF199A95D4009FCE54 /* main.m in Sources */,
+				F92CA6F0199A9E3F009FCE54 /* Character.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
