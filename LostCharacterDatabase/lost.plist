@@ -3,18 +3,36 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>nationality</key>
+		<string>USA</string>
+		<key>age</key>
+		<integer>35</integer>
+		<key>gender</key>
+		<string>Male</string>
 		<key>actor</key>
 		<string>Matthew Fox</string>
 		<key>passenger</key>
 		<string>Jack Shephard</string>
 	</dict>
 	<dict>
+		<key>nationality</key>
+		<string>English</string>
+		<key>age</key>
+		<integer>22</integer>
+		<key>gender</key>
+		<string>Female</string>
 		<key>actor</key>
 		<string>Evangeline Lilly</string>
 		<key>passenger</key>
 		<string>Kate Austen</string>
 	</dict>
 	<dict>
+		<key>nationality</key>
+		<string>Mexican</string>
+		<key>age</key>
+		<integer>18</integer>
+		<key>gender</key>
+		<string>Male</string>
 		<key>actor</key>
 		<string>Jorge Garcia</string>
 		<key>passenger</key>
