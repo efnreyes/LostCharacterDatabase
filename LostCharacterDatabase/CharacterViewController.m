@@ -7,10 +7,14 @@
 //
 
 #import "CharacterViewController.h"
+#import "Character.h"
 
 @interface CharacterViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *passengerTextField;
 @property (strong, nonatomic) IBOutlet UITextField *actorTextField;
+@property NSMutableDictionary *characterDict;
+
+#define allTrim( object ) [object stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]
 
 @end
 
@@ -28,32 +32,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 -(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
     if ([identifier isEqualToString:@"unwindSegue"]) {
-
         NSLog(@"Unwinding from new character");
+        if (!([allTrim(self.passengerTextField.text) length] == 0 || [allTrim(self.actorTextField.text) length] == 0)) {
+            self.characterDict = [NSMutableDictionary new];
+            [self.characterDict setObject:self.actorTextField.text forKey:@"actor"];
+            [self.characterDict setObject:self.passengerTextField.text forKey:@"passenger"];
+            return YES;
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                            message:@"All the fields are required"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+        }
     }
-    return YES;
+    return NO;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSMutableDictionary *)characterData {
+    return self.characterDict;
 }
-*/
 
 @end

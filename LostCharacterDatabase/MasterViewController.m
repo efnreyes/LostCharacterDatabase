@@ -7,12 +7,14 @@
 //
 
 #import "MasterViewController.h"
+#import "CharacterViewController.h"
 #import "Character.h"
 
 #import "DetailViewController.h"
 
 @interface MasterViewController ()
-@property NSArray *characters;
+@property (strong, nonatomic) NSArray *characters;
+@property (retain) IBOutlet UITableView *tableView;
 @end
 
 @implementation MasterViewController
@@ -63,6 +65,17 @@
 
 - (IBAction)unwindFromCharacterViewController:(UIStoryboardSegue *)segue {
     NSLog(@"Unwinded");
+    CharacterViewController *cvc = segue.sourceViewController;
+    NSDictionary *characterData = [cvc characterData];
+    Character *character = [NSEntityDescription insertNewObjectForEntityForName:@"Character" inManagedObjectContext:self.managedObjectContext];
+    character.actor = characterData[@"actor"];
+    character.passenger = characterData[@"passenger"];
+    if ([self.managedObjectContext save:nil]) {
+        NSLog(@"Object Saved");
+//        [self.characters addObject:character];
+//        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.characters.count-1 inSection:0];
+//        [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
 }
 
 @end

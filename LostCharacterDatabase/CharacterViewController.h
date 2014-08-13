@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Character.h"
 
 @interface CharacterViewController : UIViewController
-
+- (NSMutableDictionary *)characterData;
 @end
