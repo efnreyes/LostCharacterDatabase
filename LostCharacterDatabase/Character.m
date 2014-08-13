@@ -2,7 +2,7 @@
 //  Character.m
 //  LostCharacterDatabase
 //
-//  Created by Efrén Reyes Torres on 8/12/14.
+//  Created by Efrén Reyes Torres on 8/13/14.
 //  Copyright (c) 2014 Efrén Reyes Torres. All rights reserved.
 //
 
@@ -13,5 +13,8 @@
 
 @dynamic actor;
 @dynamic passenger;
+@dynamic age;
+@dynamic nationality;
+@dynamic gender;
 
 @end

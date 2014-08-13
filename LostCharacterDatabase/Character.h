@@ -2,7 +2,7 @@
 //  Character.h
 //  LostCharacterDatabase
 //
-//  Created by Efrén Reyes Torres on 8/12/14.
+//  Created by Efrén Reyes Torres on 8/13/14.
 //  Copyright (c) 2014 Efrén Reyes Torres. All rights reserved.
 //
 
@@ -14,5 +14,8 @@
 
 @property (nonatomic, retain) NSString * actor;
 @property (nonatomic, retain) NSString * passenger;
+@property (nonatomic, retain) NSNumber * age;
+@property (nonatomic, retain) NSString * nationality;
+@property (nonatomic, retain) NSString * gender;
 
 @end

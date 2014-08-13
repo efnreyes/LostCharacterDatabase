@@ -25,9 +25,10 @@
 		F92CA6DB199A95D4009FCE54 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92CA6B6199A95D4009FCE54 /* CoreData.framework */; };
 		F92CA6E3199A95D4009FCE54 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F92CA6E1199A95D4009FCE54 /* InfoPlist.strings */; };
 		F92CA6E5199A95D4009FCE54 /* LostCharacterDatabaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CA6E4199A95D4009FCE54 /* LostCharacterDatabaseTests.m */; };
-		F92CA6F0199A9E3F009FCE54 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CA6EF199A9E3F009FCE54 /* Character.m */; };
 		F92CA6F2199A9FE5009FCE54 /* lost.plist in Resources */ = {isa = PBXBuildFile; fileRef = F92CA6F1199A9FE5009FCE54 /* lost.plist */; };
 		F92CA6F5199ABB87009FCE54 /* CharacterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CA6F4199ABB87009FCE54 /* CharacterViewController.m */; };
+		F92CA6FB199B28FD009FCE54 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CA6FA199B28FD009FCE54 /* CustomTableViewCell.m */; };
+		F92CA6FE199B3866009FCE54 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = F92CA6FD199B3866009FCE54 /* Character.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,11 +65,13 @@
 		F92CA6E0199A95D4009FCE54 /* LostCharacterDatabaseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LostCharacterDatabaseTests-Info.plist"; sourceTree = "<group>"; };
 		F92CA6E2199A95D4009FCE54 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F92CA6E4199A95D4009FCE54 /* LostCharacterDatabaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LostCharacterDatabaseTests.m; sourceTree = "<group>"; };
-		F92CA6EE199A9E3F009FCE54 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
-		F92CA6EF199A9E3F009FCE54 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 		F92CA6F1199A9FE5009FCE54 /* lost.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = lost.plist; sourceTree = "<group>"; };
 		F92CA6F3199ABB87009FCE54 /* CharacterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterViewController.h; sourceTree = "<group>"; };
 		F92CA6F4199ABB87009FCE54 /* CharacterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterViewController.m; sourceTree = "<group>"; };
+		F92CA6F9199B28FD009FCE54 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		F92CA6FA199B28FD009FCE54 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		F92CA6FC199B3866009FCE54 /* Character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		F92CA6FD199B3866009FCE54 /* Character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,10 +145,12 @@
 				F92CA6D0199A95D4009FCE54 /* Images.xcassets */,
 				F92CA6C7199A95D4009FCE54 /* LostCharacterDatabase.xcdatamodeld */,
 				F92CA6B9199A95D4009FCE54 /* Supporting Files */,
-				F92CA6EE199A9E3F009FCE54 /* Character.h */,
-				F92CA6EF199A9E3F009FCE54 /* Character.m */,
 				F92CA6F3199ABB87009FCE54 /* CharacterViewController.h */,
 				F92CA6F4199ABB87009FCE54 /* CharacterViewController.m */,
+				F92CA6F9199B28FD009FCE54 /* CustomTableViewCell.h */,
+				F92CA6FA199B28FD009FCE54 /* CustomTableViewCell.m */,
+				F92CA6FC199B3866009FCE54 /* Character.h */,
+				F92CA6FD199B3866009FCE54 /* Character.m */,
 			);
 			path = LostCharacterDatabase;
 			sourceTree = "<group>";
@@ -280,10 +285,11 @@
 				F92CA6CF199A95D4009FCE54 /* DetailViewController.m in Sources */,
 				F92CA6F5199ABB87009FCE54 /* CharacterViewController.m in Sources */,
 				F92CA6CC199A95D4009FCE54 /* MasterViewController.m in Sources */,
+				F92CA6FE199B3866009FCE54 /* Character.m in Sources */,
 				F92CA6C3199A95D4009FCE54 /* AppDelegate.m in Sources */,
 				F92CA6C9199A95D4009FCE54 /* LostCharacterDatabase.xcdatamodeld in Sources */,
 				F92CA6BF199A95D4009FCE54 /* main.m in Sources */,
-				F92CA6F0199A9E3F009FCE54 /* Character.m in Sources */,
+				F92CA6FB199B28FD009FCE54 /* CustomTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +494,7 @@
 				F92CA6EA199A95D4009FCE54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F92CA6EB199A95D4009FCE54 /* Build configuration list for PBXNativeTarget "LostCharacterDatabaseTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +503,7 @@
 				F92CA6ED199A95D4009FCE54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

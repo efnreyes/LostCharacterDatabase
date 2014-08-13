@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "CharacterViewController.h"
+#import "CustomTableViewCell.h"
 #import "Character.h"
 
 #import "DetailViewController.h"
@@ -31,9 +32,8 @@
         [self loadDataFromPropertyList];
     }
     for (Character *c in self.characters) {
-        NSLog(@"actor: %@, passenger: %@", c.actor, c.passenger);
+        NSLog(@"Character: %@", c);
     }
-//    [self loadDataFromPropertyList];
 }
 
 - (void)loadDataFromPropertyList {
@@ -44,10 +44,14 @@
         Character *character = [NSEntityDescription insertNewObjectForEntityForName:@"Character" inManagedObjectContext:self.managedObjectContext];
         character.actor = characterInfo[@"actor"];
         character.passenger = characterInfo[@"passenger"];
+        character.age = characterInfo[@"age"];
+        character.nationality = characterInfo[@"nationality"];
+        character.gender = characterInfo[@"gender"];
         if ([self.managedObjectContext save:nil]) {
             NSLog(@"Object Saved");
         }
     }
+    [self.tableView reloadData];
 
 }
 
@@ -55,11 +59,15 @@
     return self.characters.count;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
+-(CustomTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CustomTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
     Character *character = [self.characters objectAtIndex:indexPath.row];
-    cell.textLabel.text = character.passenger;
-    cell.detailTextLabel.text = character.actor;
+    cell.passenger.text = character.passenger;
+    cell.actor.text = character.actor;
+    cell.age.text = [NSString stringWithFormat:@"%@", character.age];
+    cell.nationality.text = character.nationality;
+    cell.gender.text = character.gender;
+
     return cell;
 }
 
