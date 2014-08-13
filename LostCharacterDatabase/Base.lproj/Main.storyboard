@@ -85,6 +85,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz">
+                        <barButtonItem key="leftBarButtonItem" title="Filter" id="aKH-Dp-VFe">
+                            <connections>
+                                <action selector="onFilterPressed:" destination="pGg-6v-bdr" id="iAT-h4-ugg"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6pW-LG-Rno">
                             <connections>
                                 <segue destination="xYc-MD-q7d" kind="push" identifier="newCharacterSegue" id="elT-w4-HLQ"/>

@@ -16,6 +16,7 @@
 @interface MasterViewController ()
 @property (strong, nonatomic) NSArray *characters;
 @property (retain) IBOutlet UITableView *tableView;
+@property BOOL toogle;
 @end
 
 @implementation MasterViewController
@@ -55,8 +56,28 @@
 
 }
 
+- (IBAction)onFilterPressed:(id)sender {
+    self.toogle = !self.toogle;
+    [self filterData];
+}
+
+//Filter the characters by gender
+- (void)filterData {
+    
+}
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.characters.count;
+}
+
+// Activates the swipe to delete functionality
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+
+}
+
+// Changes the title of the delete button
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return @"SMOKE MONSTER";
 }
 
 -(CustomTableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
