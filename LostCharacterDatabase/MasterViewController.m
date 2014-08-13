@@ -24,17 +24,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadData];
+    if (self.characters.count == 0) {
+        [self loadDataFromPropertyList];
+    }
+}
+
+- (void)loadData {
     NSSortDescriptor *sortCharacter = [[NSSortDescriptor alloc] initWithKey:@"passenger" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObject:sortCharacter];
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Character"];
     request.sortDescriptors = sortDescriptors;
+    //Filter the characters by gender
+    if (self.toogle) {
+        request.predicate = [NSPredicate predicateWithFormat:@"age > %d", 20];
+    } else {
+        request.predicate = [NSPredicate predicateWithFormat:@"age <= %d", 20];
+    }
     self.characters  = [self.managedObjectContext executeFetchRequest:request error:nil];
-    if (self.characters.count == 0) {
-        [self loadDataFromPropertyList];
-    }
-    for (Character *c in self.characters) {
-        NSLog(@"Character: %@", c);
-    }
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationBottom];
 }
 
 - (void)loadDataFromPropertyList {
@@ -58,12 +66,7 @@
 
 - (IBAction)onFilterPressed:(id)sender {
     self.toogle = !self.toogle;
-    [self filterData];
-}
-
-//Filter the characters by gender
-- (void)filterData {
-    
+    [self loadData];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
