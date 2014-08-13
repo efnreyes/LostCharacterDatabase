@@ -49,4 +49,20 @@
 
 }
 
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.characters.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellID"];
+    Character *character = [self.characters objectAtIndex:indexPath.row];
+    cell.textLabel.text = character.passenger;
+    cell.detailTextLabel.text = character.actor;
+    return cell;
+}
+
+- (IBAction)unwindFromCharacterViewController:(UIStoryboardSegue *)segue {
+    NSLog(@"Unwinded");
+}
+
 @end
