@@ -1,3 +1,8 @@
+Core Data
+=========
+
+The Core Data framework provides generalized and automated solutions to common tasks associated with object life-cycle and object graph management, including persistence. There are a number of reasons why it may be appropriate for you to use Core Data. One of the simplest metrics is that, with Core Data, the amount of code you write to support the model layer of your application is typically 50% to 70% smaller as measured by lines of code.
+
 LostCharacterDatabase
 =====================
 
